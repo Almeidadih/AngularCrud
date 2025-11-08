@@ -1,0 +1,17 @@
+{
+   "pessoas":[
+       {
+           "id": 1,
+           "nome": "Diego",
+           "sobrenome": "Almeida",
+           "dtNascimento": "1993-05-30"
+       },
+         {
+              "id": 2,
+              "nome": "Elly",
+              "sobrenome": "Jesus",
+              "dtNascimento": "2005-01-11"
+         }
+   ]
+
+}
