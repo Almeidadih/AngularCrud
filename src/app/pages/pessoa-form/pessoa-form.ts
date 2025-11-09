@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { Pessoa } from '../../services/types/types';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Pessoa, PessoaService } from '../../services/pessoaservice';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-pessoa-form',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './pessoa-form.html',
   styleUrl: './pessoa-form.css',
 })
 export class PessoaForm {
 
-  titulo: string = 'Cadastro de Pessoa';
+  titulo: string = 'Cadastro de Pessoas';
 
   pessoa: Pessoa = {} as Pessoa;  
 
@@ -20,4 +21,10 @@ export class PessoaForm {
               private route: ActivatedRoute
   ) { } 
 
+
+  submeter(){
+    this.service.incluir(this.pessoa).subscribe(() => {
+      this.router.navigate(['/pessoas']);
+    })
+  }
 }

@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Pessoa } from './types/types';
 
 @Injectable({
   providedIn: 'root',
 })
-export class Pessoa {
+export class PessoaService {
 
   private readonly API  = 'http://localhost:3000/pessoas'
 id: any;
@@ -23,6 +24,6 @@ dtNascimento: any;
   incluir(pessoa: Pessoa): Observable<Pessoa> {
     return this.http.post<Pessoa>(this.API, pessoa);
   }
-
-
 }
+export type { Pessoa };
+

@@ -1,1 +1,21 @@
-<p>pessoa-form works!</p>
+<div class="content-container">
+  <h1>{{ titulo }}</h1>
+      <form>
+        <label for="input-id">ID</label><br>
+        <input class="input-id" id="input-id" name="input-id" placeholder="Digite o id" type="text" [(ngModel)]="pessoa.id"/><br><br>
+   
+        <label for="input-nome">Nome</label><br>
+        <input class="input-simples" id="input-id" name="input-nome" placeholder="Digite o seu nome " type="text" [(ngModel)]="pessoa.nome"/><br><br>
+   
+        <label for="input-sobrenome">Sobrenome</label><br>
+        <input class="input-simples" id="input-id" name="input-sobrenome" placeholder="Digite o sobrenome" type="text" [(ngModel)]="pessoa.sobrenome"/><br><br>
+   
+        <label for="input-nascimento">Data de Nascimento</label><br>
+        <input class="input-simples" id="input-id" name="input-nascimento"  type="date" [(ngModel)]="pessoa.dtNascimento"/><br><br>
+   
+        <button class="input-submeter" (click)="submeter()">
+            Cadastrar
+        </button>
+
+      </form>
+</div>
