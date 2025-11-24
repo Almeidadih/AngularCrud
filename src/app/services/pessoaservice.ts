@@ -24,6 +24,19 @@ export class PessoaService {
   incluir(pessoa: Pessoa): Observable<Pessoa> {
     return this.http.post<Pessoa>(this.API, pessoa);
   }
+
+  excluir(id: number): Observable<Pessoa> {
+    return this.http.delete<Pessoa>(this.API + `/${id}`);
+  }
+
+  buscarPorId(id: number): Observable<Pessoa | undefined>{
+    return this.http.get<Pessoa>(this.API + `/${id}`);
+  }
+
+  editar(pessoa: Pessoa): Observable<Pessoa>{
+    const url = `${this.API}/${pessoa.id}`;
+    return this.http.put<Pessoa>(url, pessoa);
+  }
 }
 export type { Pessoa };
 

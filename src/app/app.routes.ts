@@ -26,6 +26,12 @@ export const routes: Routes = [
         path:'pessoas/incluir',
         component: PessoaForm,
         title: 'Pessoas - Incluir'
+    },
+    {
+        path:'pessoas/alterar/:id',
+        component: PessoaForm,
+        title: 'Pessoas - Alterar'
     }   
+
 
 ];
