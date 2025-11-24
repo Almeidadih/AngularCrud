@@ -17,7 +17,7 @@ export class Login {
 
     onBotaoClicado(): void {
 
-       if (this.login.trim() !== '' && this.senha.trim() !== '') {
+    if (this.login.trim() !== '' && this.senha.trim() !== '') {
 
       if (this.login.trim() === 'admin' && this.senha.trim() === '123') {
               this.router.navigate(['/pessoas']);

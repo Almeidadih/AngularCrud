@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Pessoa } from '../../services/pessoaservice';
-import { Router, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
+import { PessoaService, Pessoa } from '../../services/pessoaservice';
 
 @Component({
   selector: 'app-pessoa-listagem',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './pessoa-listagem.html',
-  styleUrl: './pessoa-listagem.css',
+  styleUrls: ['./pessoa-listagem.css'],
 })
 export class PessoaListagem implements OnInit {
 
   listaPessoas: Pessoa[] = [];
 
-  constructor(private service: Pessoa, 
+  constructor(private service: PessoaService,
               private router: Router
   ) {}
 

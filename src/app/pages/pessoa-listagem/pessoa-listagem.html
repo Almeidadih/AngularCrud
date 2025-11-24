@@ -9,22 +9,25 @@
                 <th>Ações</th>
             </tr>
         </thead>
-        <body>
-            
-            @for (pessoa of listaPessoas; track pessoa) {
-                <tr>
-                    <td>{{ pessoa.id }}</td>
-                    <td>{{ pessoa.nome }}</td>
-                    <td>{{ pessoa.sobrenome }}</td>
-                    <td>{{ pessoa.dtNascimento }}</td>
-                    <td>
-                        <button class="btn-editar" [routerLink]="['alterar',pessoa.id]">Editar</button>
-                        <button class="btn-excluir" (click)="excluir(pessoa.id!)">Excluir</button>
-                    </td>
-                </tr>
+        <tbody>
 
-            }
-        </body>
+           @for (pessoa of listaPessoas; track pessoa) {
+
+             <tr>
+                <td>{{ pessoa.id }}</td>
+                <td>{{ pessoa.nome }}</td>
+                <td>{{ pessoa.sobrenome }}</td>
+                <td>{{ pessoa.dtNascimento }}</td>
+                <td>
+                    <button class="btn-editar" [routerLink]="['/pessoas/alterar', pessoa.id]">Editar</button>
+                    <button class="btn-excluir" (click)="excluir(pessoa.id!)">Excluir</button>
+                </td>
+            </tr>
+
+
+           }
+        
+        </tbody>
     </table>
 
 

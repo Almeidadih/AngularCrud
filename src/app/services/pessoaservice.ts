@@ -9,10 +9,10 @@ import { Pessoa } from './types/types';
 export class PessoaService {
 
   private readonly API  = 'http://localhost:3000/pessoas'
-id: any;
-nome: any;
-sobrenome: any;
-dtNascimento: any;
+      id: any;
+      nome: any;
+      sobrenome: any;
+      dtNascimento: any;
 
   constructor(private http: HttpClient) { }
 
